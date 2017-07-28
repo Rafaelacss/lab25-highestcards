@@ -28,12 +28,7 @@ namespace Highest_Cards
 
         }
 
-        // PUBLIC PROPERTIES
-
-        // CONSTRUCTORS
-
         // Private Methods
-
         /// <summary>
         /// This is the private _initialize method that loads the deck with 52 cards.
         /// This method also initializes other class variables
