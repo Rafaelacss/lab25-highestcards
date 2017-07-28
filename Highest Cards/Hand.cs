@@ -8,21 +8,14 @@ using System.Threading.Tasks;
  * Name: Rafaela Silveira
  * Date: July 27, 2017
  * Description: Hand class that inherits from the CardList class
- * Version: 0.1 
+ * Version: 0.3 
  */
 
 namespace Highest_Cards
 {
     public class Hand : CardList
     {
-        // PRIVATE INSTANCE VARIABLES
-
-        // PUBLIC PROPERTIES
-
-        // CONSTRUCTORS
-
-        // PRIVATE METHODS
-
+        // Private Methods
         /// <summary>
         /// This method initializes class variables and other objects
         /// </summary>
@@ -31,8 +24,7 @@ namespace Highest_Cards
             // This method is currently empty
         }
 
-        // PUBLIC METHODS
-
+        // Public Methods
         /// <summary>
         /// This method overrides the built-in ToString method
         /// </summary>
@@ -48,6 +40,21 @@ namespace Highest_Cards
             }
 
             return outputString;
+        }
+
+        public void HighestCards()
+        {
+            var highestCards =
+                from card in this
+                orderby card.Face descending
+                select card;
+
+        Console.WriteLine("This are the highest Cards:\n=====================================================");
+
+            foreach (var crd in highestCards)
+            {
+                Console.WriteLine("The " + crd.Face + " of " + crd.Suit);
+            }
         }
 
     }
