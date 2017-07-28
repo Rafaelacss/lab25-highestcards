@@ -8,12 +8,12 @@ using System.Threading.Tasks;
  * Name: Rafaela Silveira
  * Date: July 27, 2017
  * Description: Deck class that inherits from the Card class
- * Version: 0.1 
+ * Version: 0.2 
  */ 
 
 namespace Highest_Cards
 {
-    public class Deck
+    public class Deck : CardList
     {
         // Private instance variables
         private Random _random;
@@ -49,7 +49,6 @@ namespace Highest_Cards
         }
 
         // Public methods
-
         /// <summary>
         /// This method overrides the built-in ToString method and outputs the current contents
         /// of the deck.
