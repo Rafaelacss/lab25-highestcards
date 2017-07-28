@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * Name: Rafaela Silveira
  * Date: July 27, 2017
  * Description: Deck class that inherits from the Card class
- * Version: 0.2 
+ * Version: 0.3
  */ 
 
 namespace Highest_Cards
@@ -98,6 +98,20 @@ namespace Highest_Cards
 
             Console.WriteLine("Deck Contains: " + this.Count + " Cards");
             return firstCard;
+        }
+
+        public Hand Deal5()
+        {
+            Hand hand = new Hand(); // new empty hand
+
+            for (int i = 0; i < 5; i++)
+            {
+                Card firstCard = (Card)this[i].Clone();
+                this.RemoveAt(0); // removes the top card
+                hand.Add(firstCard);
+            }
+            return hand;
+
         }
     }
 }
