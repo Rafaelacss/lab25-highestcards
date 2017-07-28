@@ -8,12 +8,12 @@ using System.Threading.Tasks;
  * Name: Rafaela Silveira
  * Date: July 27, 2017
  * Description: Card Class, will be used on card shuffling and dealing simulation.
- * Version: 0.1 
+ * Version: 0.2
  */
 
 namespace Highest_Cards
 {
-    public class Card
+    public class Card : ICloneable
     {
         // Private instance variables
         private Face _face;
